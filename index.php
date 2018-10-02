@@ -17,14 +17,14 @@
     <form action="results.php?ACTION=ADD" method="post">
         <div class="row">
             <div class="col-md-4 offset-md-2 input-group-text">
-                <span class="input-group-text" id="basic-addon1">Payment Name</span>
-                <input class="input-group-text width100 form-control" type="text" name="EVENT_NAME"
+                <span class="input-group-text" id="basic-addon1">Payment Name*</span>
+                <input class="input-group-text width100 form-control" type="text" name="EVENT_NAME" required
                        aria-describedby="basic-addon1">
             </div>
             <div class="col-md-4  input-group-text">
-                <span class="input-group-text" id="basic-addon2">Due By:</span>
+                <span class="input-group-text" id="basic-addon2">Due By*:</span>
                 <input class="input-group-text width100 form-control" type="date" name="DUE_DATE"
-                       aria-describedby="basic-addon2">
+                       aria-describedby="basic-addon2" required>
             </div>
         </div>
         <div class="row">
@@ -37,9 +37,9 @@
         <div class="row">
             <div class="input-group-text col-md-8 offset-md-2">
                 <div class="">
-                    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                    <label class="input-group-text" for="inputGroupSelect01">Type*</label>
                 </div>
-                <select class="custom-select" id="inputGroupSelect01" name="EVENT_TYPE">
+                <select class="custom-select" id="inputGroupSelect01" name="EVENT_TYPE" required>
                     <option selected disabled>Choose...</option>
                     <option value="monthly">Monthly</option>
                     <option value="one time">One Time</option>
@@ -47,6 +47,7 @@
                 </select>
             </div>
         </div>
+        <div class="col-md-8 offset-md-2 common-font-size-sm text-right">*required</div>
         <div class="text-center">
             <button class="btn btn-outline-secondary common-width-15 common-margin-top-10" type="submit" value="FORM-SUMBMIT">
                 ADD
