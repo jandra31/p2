@@ -2,7 +2,7 @@
 include_once('get_data.inc.php');
 
 if ($_GET['ACTION'] == 'ADD') {
-    //run query to add to table
+    //run query to add to table gets data from post and then inserts into database
     add_data($_POST);
 }
 ?>
@@ -44,6 +44,7 @@ if ($_GET['ACTION'] == 'ADD') {
 <div class="col-sm-12 text-center">
 </div>
 <div class="">
+    <!--    runs a select query for information in the database selects everything unless filter value is applied-->
     <?php view_data() ?>
 </div>
 <div class="common-margin-top-30 row text-center common-font-size-lg common-margin-20">
